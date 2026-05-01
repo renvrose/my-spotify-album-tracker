@@ -130,6 +130,11 @@ router.get('/albums', async (req, res) => {
                     <p class="mb-0">No albums found.</p>
                </div>`
         }
+
+        <div class="text-center mt-5 text-muted small">
+            <p>This app is purely for entertainment purposes. </p>
+            <p>It started with an idea of someone who wants to stream using Spotify free plan!
+        </div>
     `));
 });
 

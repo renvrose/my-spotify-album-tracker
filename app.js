@@ -35,6 +35,7 @@ const homeRoutes = require('./routes/home');
 const albumRoutes = require('./routes/albums');
 const searchRoutes = require('./routes/search');
 const playlistRoutes = require('./routes/playlists');
+const { renderPage } = require('./routes/utils');
 
 app.use('/', homeRoutes);
 app.use('/', albumRoutes);
@@ -43,16 +44,23 @@ app.use('/', playlistRoutes);
 
 // ================= 404 HANDLER =================
 app.use((req, res) => {
-    res.status(404).send(`
-        <div class="card form-card mx-auto text-center" style="max-width: 520px;">
+    res.status(404).send(renderPage('404 - Page Not Found', `
+        <div class="card form-card mx-auto text-center" style="max-width: 580px;">
             <div class="card-body">
-                <h2 class="page-title
-                    mb-3">404 - Page Not Found</h2>
-                <p class="mb-4">Sorry, the page you're looking for doesn't exist.</p>
-                <a href="/" class="btn btn-primary">Go Home</a>
+                <div class="mb-4">
+                    <span class="badge bg-danger mb-3">404</span>
+                    <h2 class="page-title mb-3">Page not found</h2>
+                    <p class="lead text-muted">Looks like this route got lost in the playlist shuffle.</p>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-4">
+                    <a href="/" class="btn btn-primary">Go home</a>
+                    <a href="/albums" class="btn btn-outline-secondary">Albums</a>
+                    <a href="/playlists" class="btn btn-outline-secondary">Playlists</a>
+                </div>
             </div>
         </div>
-    `);
+    `));
 });
 
 

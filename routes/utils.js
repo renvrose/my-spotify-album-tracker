@@ -140,6 +140,7 @@ function renderPage(title, content, mascotState = 'default') {
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="/albums">Albums</a>
+                    <a class="nav-link" href="/playlists">Playlists</a>
                 </div>
             </div>
         </nav>
