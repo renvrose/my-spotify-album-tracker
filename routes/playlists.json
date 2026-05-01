@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "spotifyId": "1pWEDOy5uChCqMWGNmTzAV",
+    "artist": "multiple artists",
+    "year": "2024",
+    "notes": "minessss :)"
+  },
+  {
+    "id": 2,
+    "spotifyId": "6qbdp6XfFjtvDJg2YkR0pj",
+    "artist": "tomorrow x together",
+    "year": "2026",
+    "notes": "streaming!"
+  },
+  {
+    "id": 3,
+    "spotifyId": "2kOjwI0xkFEezPiDf6Nai8",
+    "artist": "txt",
+    "year": "2025",
+    "notes": ":3"
+  }
+]
